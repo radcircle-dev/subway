@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-  include("util.php");
+  include("Slack.php");
    $Slack = new Slack('xoxp-2254427554-2677262785-2687290823-213b54');
    print_r($Slack->call('channels.list'));
 print_r($Slack->call('chat.postMessage', array(
