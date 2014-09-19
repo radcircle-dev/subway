@@ -4,13 +4,13 @@
 </head>
 <body>
 <?php
-  include("Slack.php");
+  include("util.php");
    $Slack = new Slack('xoxp-2254427554-2677262785-2687290823-213b54');
-   print_r($Slack->call('channels.list'));
 print_r($Slack->call('chat.postMessage', array(
-      channel=>"C0286H1M5",
-      text=>"\$5, Footlongs",
-      username=>"SUBWAY"
+      channel=>"U027GCKGC",
+      text=>"\$5,\n Footlongs\nHey I figured out how to format text!!",
+      username=>"SUBWAY",
+      
   )));
 ?>
 </body>
