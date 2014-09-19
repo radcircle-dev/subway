@@ -4,7 +4,6 @@
 </head>
 <body>
 <?php
-
   include("Slack.php");  
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fail = false;
@@ -45,7 +44,7 @@
     }
     $string = '[{"pretext": "Test", "text": "New Submission", "color":"#fffff", "fields": [
           {"title": "Author","value": "'.$name.'\n'.$contact.'","short":false },
-          {"title": "Description","value": "'.$description.'","short":true },
+          {"title": "Description","value": "'.$desc.'","short":true },
           {"title": "Social Media","value": "'.$social.'","short":true }
           ]
         }]';
