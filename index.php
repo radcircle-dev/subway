@@ -63,13 +63,18 @@
         attachments=>$string
       );
       $Slack = new Slack('xoxp-2254427554-2677262785-2687290823-213b54');
-      // print_r($Slack->call('users.list'));
-      echo ($Slack->call('chat.postMessage', array(
+
+      // Uncomment to get the channel list
+      // print_r($Slack->call('channels.list'));
+
+      // Link to the soundcloud page, should embed in the chat
+      $Slack->call('chat.postMessage', array(
             channel=>"U027GCKGC",
             text=>"Soundcloud: $url",
             username=>"SUBWAY",
-            unfurl_links=>true)));
-      echo ($Slack->call('chat.postMessage', $array));
+            unfurl_links=>true));
+      // Information about the User
+      $Slack->call('chat.postMessage', $array);
     }
     printf("<h1>Thank You</h1>");
     printf("<p>Your submission for ".$name."'s song: ".$song." has been submitted to the Radcircle Editorial team.</p>");
