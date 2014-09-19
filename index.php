@@ -77,7 +77,7 @@
       $Slack->call('chat.postMessage', $array);
     }
     printf("<h1>Thank You</h1>");
-    printf("<p>Your submission for ".$name."'s song: ".$song." has been submitted to the Radcircle Editorial team.</p>");
+    printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
     printf("<p>We really appreciate your showing us some great music!!</p>");
   } else {
     printf('<form id="form" action="index.php" method="post">
