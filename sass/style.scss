@@ -1,0 +1,52 @@
+@import 'guide';
+
+form {
+	padding: 3rem 0 3rem 0;
+}
+
+label {
+	font-family: $stdSSP;
+	font-size: 1.8rem;
+	letter-spacing: 0.18rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #aaa;
+	text-align: left;
+	display: block;
+	margin: 0.8rem 15% 0 15%;
+}
+
+input {
+	margin: 0 15% 0 15%;
+	width: 70%;
+	display: block;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #333;
+
+	font-family: $stdSSP;
+	font-weight: 400;
+	color: #333;
+	font-size: 1.5rem;
+	transition: .25s all;
+}
+
+textarea {
+	margin: 0 15% 0 15%;
+	width: 70%;
+	display: block;
+	border: 1px solid #333;
+
+	font-family: $stdSSP;
+	font-weight: 400;
+	color: #333;
+	font-size: 1.5rem;
+	transition: .25s all;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    transition: .25s all;
+}
