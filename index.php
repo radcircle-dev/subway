@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="stylesheets/style.css" rel="stylesheet">
-    <title>Online PHP Script Execution</title>
-
-
-  </head>
-
-
-
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <title>Online PHP Script Execution</title>
+ </head>
 <body>
 
 <?php
@@ -86,10 +81,28 @@
             unfurl_links=>true));
       // Information about the User
       $Slack->call('chat.postMessage', $array);
+      printf("<h1>Thank You</h1>");
+      printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
+      printf("<p>We really appreciate your showing us some great music!!</p>");
+    } else {
+      printf('<form id="form" action="index.php" method="post">
+  <label>Your Name*:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label>Contact Email*:</label><br>
+  <input type="email" id="email" name="contact"><br>
+  <label>Artist Name*:</label><br>
+  <input type="text" id="artist" name="artist"><br>
+  <label>Song name*:</label><br>
+  <input type="text" id="songname" name="song"><br>
+  <label>Song link*:</label><br>
+  <input type="url" id="soundcloudlink" name="url"><br>
+  <label>Description of song and/or band/artist*:</label><br>
+  <textarea id="description" maxlength="140" name="description"></textarea><br>
+  <label>Links to social media accounts:</label><br>
+  <textarea id="social" name="social"></textarea><br>
+  <input type="submit" value="Submit">
+</form>');
     }
-    printf("<h1>Thank You</h1>");
-    printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
-    printf("<p>We really appreciate your showing us some great music!!</p>");
   } else {
     printf('<form id="form" action="index.php" method="post">
   <label>Your Name*:</label><br>
