@@ -92,7 +92,7 @@
       printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
       printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
     } else {
-      printf('<form id="form" action="/index.php" method="post">
+      printf('<form id="form" action="index.php" method="post">
   <label for="name">Your Name*:</label><br>
   <input type="text" id="name" name="name"><br>
   <label for="contact">Contact Email*:</label><br>
@@ -111,7 +111,7 @@
 </form>');
     }
   } else {
-    printf('<form id="form" action="/index.php" method="post">
+    printf('<form id="form" action="index.php" method="post">
   <label>Your Name*:</label><br>
   <input type="text" id="name" name="name"><br>
   <label>Contact Email*:</label><br>
