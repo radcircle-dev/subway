@@ -10,7 +10,9 @@
 <body>
 
 <?php
-  include("Slack.php");  
+  include("Slack.php"); 
+
+  $Slack = new Slack('xoxp-2254427554-2677262785-2687290823-213b54'); 
   if($_SERVER['QUERY_STRING']) {
       printf("<h1>Thank You</h1>");
       printf("<p>Your submission has been submitted to the Radcircle Editorial team.</p>");
@@ -68,21 +70,20 @@
         }]';
     if ($fail == false) {
       $array = array(
-        channel=>"U027GCKGC",
-        text=>"\$5, Footlongs",
-        username=>"SUBWAY",
+        channel=>"C0286H1M5",
+        text=>"New Submission",
+        username=>"Submission Bot",
         attachments=>$string
       );
-      $Slack = new Slack('xoxp-2254427554-2677262785-2687290823-213b54');
 
       // Uncomment to get the channel list
       // print_r($Slack->call('channels.list'));
 
       // Link to the soundcloud page, should embed in the chat
       $Slack->call('chat.postMessage', array(
-            channel=>"U027GCKGC",
+            channel=>"C0286H1M5",
             text=>"Soundcloud: $url",
-            username=>"SUBWAY",
+            username=>"Submission Bot",
             unfurl_links=>true));
       $Slack->call('chat.postMessage', $array);
       echo '<script type="text/javascript">
