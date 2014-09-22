@@ -83,7 +83,7 @@
       $Slack->call('chat.postMessage', $array);
       printf("<h1>Thank You</h1>");
       printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
-      printf("<p>We really appreciate your showing us some great music!!</p>");
+      printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
     } else {
       printf('<form id="form" action="/" method="post">
   <label>Your Name*:</label><br>

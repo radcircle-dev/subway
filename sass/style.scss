@@ -50,3 +50,17 @@ textarea:focus, input:focus{
     border-bottom: 1px solid #fff;
     transition: .25s all;
 }
+
+h1 {
+	font-size: 4rem;
+	text-align: center;
+	font-family: $stdSSP;
+	font-weight: 900;
+}
+
+p {
+	font-size: 2rem;
+	text-align: center;
+	font-family: $stdSSP;
+	font-weight: 200;
+}
