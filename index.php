@@ -11,6 +11,11 @@
 
 <?php
   include("Slack.php");  
+  if($_SERVER['QUERY_STRING']) {
+      printf("<h1>Thank You</h1>");
+      printf("<p>Your submission has been submitted to the Radcircle Editorial team.</p>");
+      printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
+  }
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fail = false;
     if($_POST['name']) {
@@ -20,7 +25,7 @@
       printf("Name is required<br>");
     }
     if($_POST['artist']) {
-      $name = $_POST['artist'];
+      $artist = $_POST['artist'];
     } else {
       $fail = true;
       printf("Artist Name is required<br>");
@@ -74,16 +79,16 @@
       // print_r($Slack->call('channels.list'));
 
       // Link to the soundcloud page, should embed in the chat
-      $Slack->call('chat.postMessage', array(
-            channel=>"U027GCKGC",
-            text=>"Soundcloud: $url",
-            username=>"SUBWAY",
-            unfurl_links=>true));
+      // $Slack->call('chat.postMessage', array(
+      //       channel=>"U027GCKGC",
+      //       text=>"Soundcloud: $url",
+      //       username=>"SUBWAY",
+      //       unfurl_links=>true));
       // Information about the User
-      $Slack->call('chat.postMessage', $array);
-      printf("<h1>Thank You</h1>");
-      printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
-      printf("<p>We really appreciate your showing us some great music!!</p>");
+      // $Slack->call('chat.postMessage', $array);
+      echo '<script type="text/javascript">
+           window.location = "/?s=0"
+      </script>';
     } else {
       printf('<form id="form" action="/" method="post">
   <label>Your Name*:</label><br>
