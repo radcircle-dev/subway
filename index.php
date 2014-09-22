@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="stylesheets/style.css" rel="stylesheet">
-  <title>Online PHP Script Execution</title>
+  <title>Submit to Radcircles Editorial Team</title>
  </head>
 <body>
 
@@ -86,11 +86,11 @@
             unfurl_links=>true));
       $Slack->call('chat.postMessage', $array);
       echo '<script type="text/javascript">
-           window.location = "/?s=0"
+           window.location = "/submissions?s=0"
       </script>';
-      printf("<h1>Thank You</h1>");
-      printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
-      printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
+      // printf("<h1>Thank You</h1>");
+      // printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
+      // printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
     } else {
       printf('<form id="form" action="index.php" method="post">
   <label for="name">Your Name*:</label><br>
