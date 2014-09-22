@@ -61,7 +61,7 @@
       $fail = true;
       printf("Artist description is required<br>");
     }
-    $string = '[{"pretext": "Test", "text": "New Submission", "color":"#fffff", "fields": [
+    $string = '[{"pretext": "", "text": "New Submission", "color":"#fffff", "fields": [
           {"title": "User Name","value": "'.$name.'\n'.$contact.'","short":true },
           {"title": "Artist Name","value": "'.$artist.'","short":true },
           {"title": "Description","value": "'.$desc.'","short":true },
