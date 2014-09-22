@@ -84,32 +84,28 @@
             text=>"Soundcloud: $url",
             username=>"SUBWAY",
             unfurl_links=>true));
-      Information about the User
       $Slack->call('chat.postMessage', $array);
-<<<<<<< HEAD
       echo '<script type="text/javascript">
            window.location = "/?s=0"
       </script>';
-=======
       printf("<h1>Thank You</h1>");
       printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
       printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
->>>>>>> FETCH_HEAD
     } else {
       printf('<form id="form" action="/" method="post">
-  <label>Your Name*:</label><br>
+  <label for="name">Your Name*:</label><br>
   <input type="text" id="name" name="name"><br>
-  <label>Contact Email*:</label><br>
+  <label for="contact">Contact Email*:</label><br>
   <input type="email" id="email" name="contact"><br>
-  <label>Artist Name*:</label><br>
+  <label for="artist">Artist Name*:</label><br>
   <input type="text" id="artist" name="artist"><br>
-  <label>Song name*:</label><br>
+  <label for="song">Song name*:</label><br>
   <input type="text" id="songname" name="song"><br>
-  <label>Song link*:</label><br>
+  <label for="url">Song link*:</label><br>
   <input type="url" id="soundcloudlink" name="url"><br>
-  <label>Description of song and/or band/artist*:</label><br>
+  <label for="description">Description of song and/or band/artist*:</label><br>
   <textarea id="description" maxlength="140" name="description"></textarea><br>
-  <label>Links to social media accounts:</label><br>
+  <label for="social">Links to social media accounts:</label><br>
   <textarea id="social" name="social"></textarea><br>
   <input type="submit" value="Submit">
 </form>');
