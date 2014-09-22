@@ -86,9 +86,15 @@
             unfurl_links=>true));
       Information about the User
       $Slack->call('chat.postMessage', $array);
+<<<<<<< HEAD
       echo '<script type="text/javascript">
            window.location = "/?s=0"
       </script>';
+=======
+      printf("<h1>Thank You</h1>");
+      printf("<p>Your submission for <strong>".$name."</strong>'s song: <strong>".$song."</strong> has been submitted to the Radcircle Editorial team.</p>");
+      printf("<p>Return to <a href='http://www.radcircle.com'>Radcircle</a></p>");
+>>>>>>> FETCH_HEAD
     } else {
       printf('<form id="form" action="/" method="post">
   <label>Your Name*:</label><br>
