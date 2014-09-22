@@ -79,13 +79,13 @@
       // print_r($Slack->call('channels.list'));
 
       // Link to the soundcloud page, should embed in the chat
-      // $Slack->call('chat.postMessage', array(
-      //       channel=>"U027GCKGC",
-      //       text=>"Soundcloud: $url",
-      //       username=>"SUBWAY",
-      //       unfurl_links=>true));
-      // Information about the User
-      // $Slack->call('chat.postMessage', $array);
+      $Slack->call('chat.postMessage', array(
+            channel=>"U027GCKGC",
+            text=>"Soundcloud: $url",
+            username=>"SUBWAY",
+            unfurl_links=>true));
+      Information about the User
+      $Slack->call('chat.postMessage', $array);
       echo '<script type="text/javascript">
            window.location = "/?s=0"
       </script>';
